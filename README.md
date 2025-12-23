@@ -20,9 +20,9 @@ Execute gen.sh via bash:
 cat gen.sh | bash -s
 ```
 
-Or provide input to gen.sh when running via bash -s:
+Or provide input to gen.sh directly:
 ```bash
-bash -s < gen.sh <<'EOF'
+./gen.sh <<'EOF'
 echo "Commands here"
 EOF
 ```
