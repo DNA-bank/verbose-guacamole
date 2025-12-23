@@ -14,13 +14,18 @@ A simple bash script generator.
 echo "echo 'Hello World'" | ./gen.sh
 ```
 
-### Using bash -s
-Execute gen.sh via bash:
+### Using bash to execute commands
+Pipe gen.sh output to bash for execution:
 ```bash
-cat gen.sh | bash -s
+echo "echo 'Hello World'" | ./gen.sh | bash
 ```
 
-Or provide input to gen.sh directly:
+Or use bash -s:
+```bash
+echo "date" | ./gen.sh | bash -s
+```
+
+Provide input using a heredoc:
 ```bash
 ./gen.sh <<'EOF'
 echo "Commands here"
@@ -29,7 +34,7 @@ EOF
 
 ## Description
 
-The `gen.sh` script reads commands from stdin and outputs them. It can be used interactively or with piped input.
+The `gen.sh` script reads commands from stdin and echoes them to stdout. It can be used interactively or with piped input.
 
 To execute the commands, pipe the output to bash:
 ```bash
