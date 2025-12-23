@@ -20,7 +20,7 @@ Pipe gen.sh output to bash for execution:
 echo "echo 'Hello World'" | ./gen.sh | bash
 ```
 
-Or use bash -s:
+You can also use `bash -s` (which reads from stdin):
 ```bash
 echo "date" | ./gen.sh | bash -s
 ```
@@ -28,7 +28,9 @@ echo "date" | ./gen.sh | bash -s
 Provide input using a heredoc:
 ```bash
 ./gen.sh <<'EOF'
-echo "Commands here"
+echo "Hello from heredoc"
+date
+whoami
 EOF
 ```
 
